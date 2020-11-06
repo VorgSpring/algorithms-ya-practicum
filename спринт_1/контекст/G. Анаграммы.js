@@ -28,12 +28,7 @@ const getMap = (word) => {
 
   for(let i = 0; i < word.length; i++) {
     const item = word[i];
-
-    if (map[item]) {
-      map[item] = map[item] + 1;
-    } else {
-      map[item] = 1;
-    }
+    map[item] = map[item] ? map[item] + 1 : 1;
   }
 
   return map;
