@@ -15,20 +15,20 @@
 const readline = require('readline');
 
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+  input: process.stdin,
+  output: process.stdout
 });
 
 rl.setPrompt('');
 rl.prompt();
 
 rl.on('line', (value) => {
-    const [a, x, b, c] = value.split(' ').map(
-        item => parseInt(item, 10)
-    );
+  const [a, x, b, c] = value.split(' ').map(
+    item => parseInt(item, 10)
+  );
 
-    const result = a * x * x + b * x + c;
-    console.log(result);
+  const result = a * x * x + b * x + c;
+  console.log(result);
 
-    rl.close();
+  rl.close();
 });
